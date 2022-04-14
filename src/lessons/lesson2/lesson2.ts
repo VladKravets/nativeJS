@@ -23,6 +23,31 @@ console.log('lesson 2');
 
 // Task 01
 // Реализовать функцию sum которая суммирует 2 числа следующим образом sum(3)(6) === 9
+let globalScope = {
+    outerScope: null,
+    f: 'Function',
+    someFunc: 'Function', // undefined -> 'Function'
+    someFunc2: 'Function',
+};
+function sum(arg: number) {
+    let fScope = {
+        outerScope: globalScope,
+        arg: undefined, // undefined -> 100 -> 110 -> 130 -> 160 -> 660
+        inner: 'Function',
+    };
+    function inner(arg2: number) {
+        let innerScope = {
+            outerScope: fScope,
+            arg2: 6, // undefined -> 10
+        }
+        arg += arg2
+        console.log('arg ', arg);
+    }
+
+    return inner;
+}
+const someFunc = sum(3);
+someFunc(6);
 
 // Task 02
 // Реализовать функцию makeCounter которая работает следующим образом:
@@ -60,4 +85,5 @@ console.log('lesson 2');
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
 
 // just a plug
-export default () => {};
+export default () => {
+};
