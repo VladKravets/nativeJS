@@ -16,7 +16,6 @@ console.log('lesson 3');
 // https://habr.com/ru/company/oleg-bunin/blog/417461/?_ga=2.54695343.543933152.1602500664-1040035071.1596811661
 
 
-console.log('hello')
 
 
 // just a plug
