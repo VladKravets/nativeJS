@@ -146,28 +146,63 @@ console.log('lesson 4');
 // Task 01
 // Создайте промис, который постоянно находиться в состоянии pending.
 // В конструкторе промиса выведите в консоль сообщение "Promise is created".
-const prom=new Promise(()=>{
-    console.log('Promise is created')
-})
+// const promise = new Promise((resolve, reject) => {
+//     const data = {
+//         server: 200,
+//         name: 'Vlad',
+//         isMarried: true,
+//         child: 1
+//     }
+//     resolve(data)
+// })
+//     .then(res=>{
+//         console.log(promise,'Promise is created')
+//     })
 
 // Task 02
 // Создайте промис, который после создания сразу же переходит в состояние resolve
 // и возвращает строку 'Promise Data'
 // Получите данные промиса и выведите их в консоль
-
+// const promise = Promise.resolve('Promise Data')
+//     .then(res => {
+//         setTimeout(() => {
+//                 console.log(res, promise)
+//             }, 2000
+//         )
+//     })
 
 // Task 03
 // Создайте промис, который после создания сразу же переходит в состояние rejected
 // и возвращает строку 'Promise Error'
 // Получите данные промиса и выведите их в консоль
-
+// const promise = Promise.reject(new Error('Promise Error'))
+//     .catch(err => {
+//       alert(err)
+//         console.log(promise)
+//     })
 
 // Task 04
 // Создайте промис, который переходит в состояние resolved через 3с.
 // (Используйте setTimeout)
 // и возвращает строку 'Promise Data'
 // Получите данные промиса и выведите их в консоль
-
+// const promise = new Promise((resolve, reject) => {
+//     const data = {
+//         server: 200,
+//         name: 'Vlad',
+//         isMarried: true,
+//         child: 1
+//     }
+//     setTimeout(() => {
+//         resolve(data)
+//     }, 3000)
+// })
+//     .then((result) => {
+//         console.log(result);
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     })
 
 // Task 05
 // Создайте литерал объекта handlePromise со следующими свойствами:
@@ -198,6 +233,6 @@ const prom=new Promise(()=>{
 // и выведите в консоль {name, age, city}
 
 
-
 // just a plug
-export default ()=>{};
+export default () => {
+};
